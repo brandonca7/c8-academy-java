@@ -4,11 +4,10 @@ import java.sql.Connection;
 
 public class Main {
     public static void main(String[] args) {
-      StudentAppClass jdbc = new StudentAppClass();
+    	FeedAppClass jdbc = new FeedAppClass();
         Connection conn = jdbc.createConnection();
-//        jdbc.getAllStudents(conn);
-//        jdbc.getStudentById(conn, 16);
-        jdbc.addStudent(conn, 8, "John", "john@hello.com", "162435611");
+//        jdbc.addUser(conn, "John", "Doe", "johndoe123", "12345567", "john123@hello.com", "john123", false);
+        jdbc.getAllUsers(conn);
         jdbc.closeConnection(conn);
     }
 }
